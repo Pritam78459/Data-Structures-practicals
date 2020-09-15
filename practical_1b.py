@@ -11,16 +11,22 @@ Mat3 = [[0,0,0,],
 
 # Matrix Addition
 for i in range(len(Mat1)):
-    for j in range(len(Mat2)):
-        Mat3[i][j] = Mat1[i][j] + Mat2[i][j]
+    for j in range(len(Mat2[0])):
+        for k in range(len(Mat2)):
+            Mat3[i][j] += Mat1[i][k] + Mat2[k][j]
         
 print(Mat3)
 
 # Matrix Multiplication
 
+Mat3 = [[0, 0, 0, 0], 
+        [0, 0, 0, 0], 
+        [0, 0, 0, 0]] 
+
 for i in range(len(Mat1)):
-    for j in range(len(Mat2)):
-        Mat3[i][j] = Mat1[i][j] * Mat2[i][j]
+    for j in range(len(Mat2[0])):
+        for k in range(len(Mat2)):
+            Mat3[i][j] += Mat1[i][k] * Mat2[k][j]
         
 print(Mat3)
 
